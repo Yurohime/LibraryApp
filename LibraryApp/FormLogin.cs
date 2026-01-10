@@ -36,12 +36,15 @@ namespace LibraryApp
         public FormLogin()
         {
             InitializeComponent();
-
-            string sqlconnection = $"server={sqlcomp.connection};uid={sqlcomp.username};password={sqlcomp.password};database={sqlcomp.database}";
-            this.sqlconnection = sqlconnection;
+            connectToSQL();
             getUserData();
         }
 
+        private void connectToSQL()
+        {
+            string sqlconnection = $"server={sqlcomp.connection};uid={sqlcomp.username};password={sqlcomp.password};database={sqlcomp.database}";
+            this.sqlconnection = sqlconnection;
+        }
         private void getUserData()
         {
             sqlquary = $"select * from users;";
@@ -49,7 +52,7 @@ namespace LibraryApp
             command = new MySqlCommand(sqlquary, connection);
             adapter = new MySqlDataAdapter(command);
             adapter.Fill(sqldata);
-            Console.WriteLine(sqldata.Rows[0][0].ToString());
+            //Console.WriteLine(sqldata.Rows[0][0].ToString());
         }
 
         private void loginAttempt()

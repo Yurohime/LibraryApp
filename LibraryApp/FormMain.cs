@@ -52,6 +52,58 @@ namespace LibraryApp
             form.Show();
         }
 
+        public void loadCatalog()
+        {
+            FormCatalog form = new FormCatalog();
+            form.Dock = DockStyle.Top;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.TopLevel = false;
+            form.FormNetwork = this;
+
+            pnl_main.Controls.Clear();
+            pnl_main.Controls.Add(form);
+            form.Show();
+        }
+
+        public void loadMember()
+        {
+            FormManage form = new FormManage();
+            form.Dock = DockStyle.Top;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.TopLevel = false;
+            form.FormNetwork = this;
+
+            pnl_main.Controls.Clear();
+            pnl_main.Controls.Add(form);
+            form.Show();
+        }
+
+        public void loadLoan()
+        {
+            FormMainMenu form = new FormMainMenu();
+            form.Dock = DockStyle.Top;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.TopLevel = false;
+            form.FormNetwork = this;
+
+            pnl_main.Controls.Clear();
+            pnl_main.Controls.Add(form);
+            form.Show();
+        }
+
+        public void loadManage()
+        {
+            FormMainMenu form = new FormMainMenu();
+            form.Dock = DockStyle.Top;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.TopLevel = false;
+            form.FormNetwork = this;
+
+            pnl_main.Controls.Clear();
+            pnl_main.Controls.Add(form);
+            form.Show();
+        }
+
         public void setGlobalVariable(string action, string vartype, string var)
         {
             string newVariable = var;

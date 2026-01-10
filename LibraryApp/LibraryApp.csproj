@@ -193,6 +193,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormCatalog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCatalog.Designer.cs">
+      <DependentUpon>FormCatalog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHistory.Designer.cs">
+      <DependentUpon>FormHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManageCatalog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageCatalog.Designer.cs">
+      <DependentUpon>FormManageCatalog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMember.Designer.cs">
+      <DependentUpon>FormMember.cs</DependentUpon>
+    </Compile>
     <Compile Include="Global Variable\ClassSQLComponent.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
@@ -215,6 +239,18 @@
     <Compile Include="Global Variable\UserComponent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormCatalog.resx">
+      <DependentUpon>FormCatalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHistory.resx">
+      <DependentUpon>FormHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageCatalog.resx">
+      <DependentUpon>FormManageCatalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMember.resx">
+      <DependentUpon>FormMember.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>

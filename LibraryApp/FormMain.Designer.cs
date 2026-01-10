@@ -29,59 +29,33 @@
         private void InitializeComponent()
         {
             this.pnl_main = new System.Windows.Forms.Panel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.libaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_main
             // 
-            this.pnl_main.Location = new System.Drawing.Point(0, 25);
+            this.pnl_main.Location = new System.Drawing.Point(0, 60);
             this.pnl_main.Name = "pnl_main";
             this.pnl_main.Size = new System.Drawing.Size(874, 463);
             this.pnl_main.TabIndex = 0;
             this.pnl_main.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_main_Paint);
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.libaryToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(874, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // libaryToolStripMenuItem
-            // 
-            this.libaryToolStripMenuItem.Name = "libaryToolStripMenuItem";
-            this.libaryToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.libaryToolStripMenuItem.Text = "Library";
-            this.libaryToolStripMenuItem.Click += new System.EventHandler(this.libaryToolStripMenuItem_Click);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(874, 486);
+            this.ClientSize = new System.Drawing.Size(874, 523);
             this.Controls.Add(this.pnl_main);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormMain";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FormMain_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel pnl_main;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem libaryToolStripMenuItem;
     }
 }
 

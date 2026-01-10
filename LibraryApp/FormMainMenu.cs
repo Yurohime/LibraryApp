@@ -23,5 +23,30 @@ namespace LibraryApp
         {
             InitializeComponent();
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pboxm1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbox_catalog_Click(object sender, EventArgs e)
+        {
+            FormNetwork.loadCatalog();
+        }
+
+        private void pbox_member_Click(object sender, EventArgs e)
+        {
+            FormNetwork.loadMember();
+        }
     }
 }

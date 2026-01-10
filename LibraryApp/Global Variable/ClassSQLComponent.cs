@@ -10,4 +10,10 @@ public class SQLComponent
     public string username = "root";
     public string password = "";
     public string database = "db_library";
+
+    public string connectToSQL()
+    {
+        string sqlconnection = $"server={connection};uid={username};password={password};database={database}";
+        return sqlconnection;
+    }
 }
