@@ -68,7 +68,7 @@ namespace LibraryApp
             }
             if (!cbox_unknown.Checked)
             {
-                removeRowFromDataWithParam("Unknown");
+                removeRowFromDataWithParam("Missing");
             }
         }
 

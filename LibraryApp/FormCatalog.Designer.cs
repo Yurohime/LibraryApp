@@ -170,9 +170,9 @@
             this.cbox_unknown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbox_unknown.Location = new System.Drawing.Point(14, 99);
             this.cbox_unknown.Name = "cbox_unknown";
-            this.cbox_unknown.Size = new System.Drawing.Size(95, 24);
+            this.cbox_unknown.Size = new System.Drawing.Size(68, 24);
             this.cbox_unknown.TabIndex = 18;
-            this.cbox_unknown.Text = "Unknown";
+            this.cbox_unknown.Text = "Other";
             this.cbox_unknown.UseVisualStyleBackColor = true;
             this.cbox_unknown.CheckedChanged += new System.EventHandler(this.cbox_unknown_CheckedChanged);
             // 

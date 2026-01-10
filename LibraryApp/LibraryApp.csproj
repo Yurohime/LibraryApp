@@ -211,11 +211,11 @@
     <Compile Include="FormManageCatalog.Designer.cs">
       <DependentUpon>FormManageCatalog.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMember.cs">
+    <Compile Include="FormManageLoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMember.Designer.cs">
-      <DependentUpon>FormMember.cs</DependentUpon>
+    <Compile Include="FormManageLoan.Designer.cs">
+      <DependentUpon>FormManageLoan.cs</DependentUpon>
     </Compile>
     <Compile Include="Global Variable\ClassSQLComponent.cs" />
     <Compile Include="FormMain.cs">
@@ -248,8 +248,8 @@
     <EmbeddedResource Include="FormManageCatalog.resx">
       <DependentUpon>FormManageCatalog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMember.resx">
-      <DependentUpon>FormMember.cs</DependentUpon>
+    <EmbeddedResource Include="FormManageLoan.resx">
+      <DependentUpon>FormManageLoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>

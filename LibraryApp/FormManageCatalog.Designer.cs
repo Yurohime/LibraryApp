@@ -45,8 +45,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -198,31 +196,11 @@
             this.button4.Text = "Clear";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(15, 60);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 20);
-            this.label5.TabIndex = 50;
-            this.label5.Text = "Search Book Title";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(19, 83);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(227, 26);
-            this.textBox5.TabIndex = 49;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(265, 60);
+            this.label6.Location = new System.Drawing.Point(15, 58);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(113, 20);
             this.label6.TabIndex = 52;
@@ -231,7 +209,7 @@
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(269, 83);
+            this.textBox6.Location = new System.Drawing.Point(19, 81);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(130, 26);
             this.textBox6.TabIndex = 51;
@@ -243,8 +221,6 @@
             this.ClientSize = new System.Drawing.Size(874, 463);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox4);
@@ -287,8 +263,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox6;
     }
