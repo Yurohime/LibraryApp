@@ -193,7 +193,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassSQLComponent.cs" />
+    <Compile Include="Global Variable\ClassSQLComponent.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +212,7 @@
     <Compile Include="FormMainMenu.Designer.cs">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Global Variable\UserComponent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormMain.resx">

@@ -51,9 +51,41 @@ namespace LibraryApp
             adapter.Fill(sqldata);
             Console.WriteLine(sqldata.Rows[0][0].ToString());
         }
+
+        private void loginAttempt()
+        {
+            string username = tboxUsername.Text;
+            string password = tboxPassword.Text;
+
+            for (int i = 0; i < sqldata.Rows.Count; i++)
+            {
+                // if username doesnt match, continue search
+                if(username != sqldata.Rows[i][2].ToString())
+                {
+                    continue;
+                }
+
+                // if password doesnt match, break
+                if (password != sqldata.Rows[i][1].ToString())
+                {
+                    MessageBox.Show("Wrong Password");
+                    break;
+                }
+
+                FormNetwork.setGlobalVariable("set", "username", sqldata.Rows[i][2].ToString());
+                FormNetwork.setGlobalVariable("set", "userid", sqldata.Rows[i][0].ToString());
+                FormNetwork.loadMainMenu();
+
+            }
+        }
         private void FormLogin_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            loginAttempt();
         }
     }
 }
