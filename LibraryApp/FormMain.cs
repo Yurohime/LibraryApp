@@ -78,9 +78,9 @@ namespace LibraryApp
             form.Show();
         }
 
-        public void loadLoan()
+        public void loadManageCatalog()
         {
-            FormMainMenu form = new FormMainMenu();
+            FormManageCatalog form = new FormManageCatalog();
             form.Dock = DockStyle.Top;
             form.FormBorderStyle = FormBorderStyle.None;
             form.TopLevel = false;

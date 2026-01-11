@@ -30,24 +30,26 @@
         {
             this.components = new System.ComponentModel.Container();
             this.lblc1 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btn_back = new System.Windows.Forms.Button();
+            this.dgv_book_list = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbox_title = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.tbox_author = new System.Windows.Forms.TextBox();
+            this.lblyear = new System.Windows.Forms.Label();
+            this.tbox_year = new System.Windows.Forms.TextBox();
+            this.btn_add = new System.Windows.Forms.Button();
+            this.btn_edit = new System.Windows.Forms.Button();
+            this.btn_remove = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.tbox_marker = new System.Windows.Forms.TextBox();
+            this.btn_clear = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tbox_search = new System.Windows.Forms.TextBox();
+            this.tbn_gen = new System.Windows.Forms.Button();
+            this.btn_clear_all = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_book_list)).BeginInit();
             this.SuspendLayout();
             // 
             // lblc1
@@ -60,24 +62,26 @@
             this.lblc1.TabIndex = 4;
             this.lblc1.Text = "Manage Catalog";
             // 
-            // button5
+            // btn_back
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(787, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 34);
-            this.button5.TabIndex = 33;
-            this.button5.Text = "Return";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btn_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_back.Location = new System.Drawing.Point(787, 12);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(75, 34);
+            this.btn_back.TabIndex = 33;
+            this.btn_back.Text = "Return";
+            this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
-            // dataGridView1
+            // dgv_book_list
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 129);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(816, 184);
-            this.dataGridView1.TabIndex = 34;
+            this.dgv_book_list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_book_list.Location = new System.Drawing.Point(19, 90);
+            this.dgv_book_list.Name = "dgv_book_list";
+            this.dgv_book_list.RowTemplate.Height = 21;
+            this.dgv_book_list.Size = new System.Drawing.Size(827, 214);
+            this.dgv_book_list.TabIndex = 34;
+            this.dgv_book_list.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_book_list_CellMouseClick);
             // 
             // contextMenuStrip1
             // 
@@ -88,19 +92,19 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 328);
+            this.label1.Location = new System.Drawing.Point(15, 316);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 20);
             this.label1.TabIndex = 37;
             this.label1.Text = "Book Title";
             // 
-            // textBox2
+            // tbox_title
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(19, 351);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(621, 26);
-            this.textBox2.TabIndex = 36;
+            this.tbox_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbox_title.Location = new System.Drawing.Point(19, 339);
+            this.tbox_title.Name = "tbox_title";
+            this.tbox_title.Size = new System.Drawing.Size(621, 26);
+            this.tbox_title.TabIndex = 36;
             // 
             // label2
             // 
@@ -112,89 +116,94 @@
             this.label2.TabIndex = 39;
             this.label2.Text = "Book Author";
             // 
-            // textBox1
+            // tbox_author
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(19, 412);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 26);
-            this.textBox1.TabIndex = 38;
+            this.tbox_author.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbox_author.Location = new System.Drawing.Point(19, 412);
+            this.tbox_author.Name = "tbox_author";
+            this.tbox_author.Size = new System.Drawing.Size(227, 26);
+            this.tbox_author.TabIndex = 38;
             // 
-            // label3
+            // lblyear
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(265, 389);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 20);
-            this.label3.TabIndex = 41;
-            this.label3.Text = "Book Title";
+            this.lblyear.AutoSize = true;
+            this.lblyear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblyear.Location = new System.Drawing.Point(265, 389);
+            this.lblyear.Name = "lblyear";
+            this.lblyear.Size = new System.Drawing.Size(43, 20);
+            this.lblyear.TabIndex = 41;
+            this.lblyear.Text = "Year";
             // 
-            // textBox3
+            // tbox_year
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(269, 412);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(92, 26);
-            this.textBox3.TabIndex = 40;
+            this.tbox_year.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbox_year.Location = new System.Drawing.Point(269, 412);
+            this.tbox_year.Name = "tbox_year";
+            this.tbox_year.Size = new System.Drawing.Size(78, 26);
+            this.tbox_year.TabIndex = 40;
             // 
-            // button2
+            // btn_add
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(749, 339);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 28);
-            this.button2.TabIndex = 43;
-            this.button2.Text = "Add";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.Location = new System.Drawing.Point(760, 338);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(86, 28);
+            this.btn_add.TabIndex = 43;
+            this.btn_add.Text = "Add";
+            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // button1
+            // btn_edit
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(749, 375);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 28);
-            this.button1.TabIndex = 44;
-            this.button1.Text = "Edit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_edit.Location = new System.Drawing.Point(760, 374);
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Size = new System.Drawing.Size(86, 28);
+            this.btn_edit.TabIndex = 44;
+            this.btn_edit.Text = "Edit";
+            this.btn_edit.UseVisualStyleBackColor = true;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
-            // button3
+            // btn_remove
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(749, 411);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(86, 28);
-            this.button3.TabIndex = 45;
-            this.button3.Text = "Remove";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_remove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_remove.Location = new System.Drawing.Point(760, 410);
+            this.btn_remove.Name = "btn_remove";
+            this.btn_remove.Size = new System.Drawing.Size(86, 28);
+            this.btn_remove.TabIndex = 45;
+            this.btn_remove.Text = "Remove";
+            this.btn_remove.UseVisualStyleBackColor = true;
+            this.btn_remove.Click += new System.EventHandler(this.btn_remove_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(379, 389);
+            this.label4.Location = new System.Drawing.Point(369, 389);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 20);
             this.label4.TabIndex = 47;
             this.label4.Text = "Book Marker";
             // 
-            // textBox4
+            // tbox_marker
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(383, 412);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(154, 26);
-            this.textBox4.TabIndex = 46;
+            this.tbox_marker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbox_marker.Location = new System.Drawing.Point(373, 412);
+            this.tbox_marker.Name = "tbox_marker";
+            this.tbox_marker.Size = new System.Drawing.Size(187, 26);
+            this.tbox_marker.TabIndex = 46;
+            this.tbox_marker.TextChanged += new System.EventHandler(this.tbox_marker_TextChanged);
             // 
-            // button4
+            // btn_clear
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(561, 410);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(79, 28);
-            this.button4.TabIndex = 48;
-            this.button4.Text = "Clear";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clear.Location = new System.Drawing.Point(646, 339);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(79, 28);
+            this.btn_clear.TabIndex = 48;
+            this.btn_clear.Text = "Clear";
+            this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // label6
             // 
@@ -206,40 +215,65 @@
             this.label6.TabIndex = 52;
             this.label6.Text = "Search Marker";
             // 
-            // textBox6
+            // tbox_search
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(19, 81);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(130, 26);
-            this.textBox6.TabIndex = 51;
+            this.tbox_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbox_search.Location = new System.Drawing.Point(132, 56);
+            this.tbox_search.Name = "tbox_search";
+            this.tbox_search.Size = new System.Drawing.Size(130, 26);
+            this.tbox_search.TabIndex = 51;
+            this.tbox_search.TextChanged += new System.EventHandler(this.tbox_search_TextChanged);
+            // 
+            // tbn_gen
+            // 
+            this.tbn_gen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbn_gen.Location = new System.Drawing.Point(566, 410);
+            this.tbn_gen.Name = "tbn_gen";
+            this.tbn_gen.Size = new System.Drawing.Size(159, 28);
+            this.tbn_gen.TabIndex = 53;
+            this.tbn_gen.Text = "Generate Marker";
+            this.tbn_gen.UseVisualStyleBackColor = true;
+            // 
+            // btn_clear_all
+            // 
+            this.btn_clear_all.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clear_all.Location = new System.Drawing.Point(268, 56);
+            this.btn_clear_all.Name = "btn_clear_all";
+            this.btn_clear_all.Size = new System.Drawing.Size(79, 28);
+            this.btn_clear_all.TabIndex = 54;
+            this.btn_clear_all.Text = "Clear";
+            this.btn_clear_all.UseVisualStyleBackColor = true;
+            this.btn_clear_all.Click += new System.EventHandler(this.btn_clear_all_Click);
             // 
             // FormManageCatalog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(874, 463);
+            this.Controls.Add(this.btn_clear_all);
+            this.Controls.Add(this.tbn_gen);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.tbox_search);
+            this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbox_marker);
+            this.Controls.Add(this.btn_remove);
+            this.Controls.Add(this.btn_edit);
+            this.Controls.Add(this.btn_add);
+            this.Controls.Add(this.lblyear);
+            this.Controls.Add(this.tbox_year);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbox_author);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.tbox_title);
+            this.Controls.Add(this.dgv_book_list);
+            this.Controls.Add(this.btn_back);
             this.Controls.Add(this.lblc1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormManageCatalog";
             this.Text = "FormManageCatalog";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FormManageCatalog_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_book_list)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,22 +282,24 @@
         #endregion
 
         private System.Windows.Forms.Label lblc1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btn_back;
+        private System.Windows.Forms.DataGridView dgv_book_list;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbox_title;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox tbox_author;
+        private System.Windows.Forms.Label lblyear;
+        private System.Windows.Forms.TextBox tbox_year;
+        private System.Windows.Forms.Button btn_add;
+        private System.Windows.Forms.Button btn_edit;
+        private System.Windows.Forms.Button btn_remove;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox tbox_marker;
+        private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tbox_search;
+        private System.Windows.Forms.Button tbn_gen;
+        private System.Windows.Forms.Button btn_clear_all;
     }
 }

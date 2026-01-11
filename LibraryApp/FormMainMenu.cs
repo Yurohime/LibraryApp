@@ -36,7 +36,7 @@ namespace LibraryApp
 
         private void pboxm1_Click(object sender, EventArgs e)
         {
-
+            FormNetwork.loadManageCatalog();
         }
 
         private void pbox_catalog_Click(object sender, EventArgs e)

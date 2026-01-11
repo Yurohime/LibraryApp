@@ -33,8 +33,7 @@
             this.pbox_catalog = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pbox_manage = new System.Windows.Forms.Label();
-            this.pboxm1 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.pbox_manage_catalog = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pbox_member = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,9 +49,9 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbox_catalog)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxm1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox_manage_catalog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbox_member)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
@@ -110,25 +109,15 @@
             this.pbox_manage.Text = "Manage Catalog";
             this.pbox_manage.Click += new System.EventHandler(this.label4_Click);
             // 
-            // pboxm1
+            // pbox_manage_catalog
             // 
-            this.pboxm1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pboxm1.Location = new System.Drawing.Point(52, 314);
-            this.pboxm1.Name = "pboxm1";
-            this.pboxm1.Size = new System.Drawing.Size(83, 86);
-            this.pboxm1.TabIndex = 1;
-            this.pboxm1.TabStop = false;
-            this.pboxm1.Click += new System.EventHandler(this.pboxm1_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(145, 200);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(238, 20);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "See and Manage your Librarians";
+            this.pbox_manage_catalog.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbox_manage_catalog.Location = new System.Drawing.Point(52, 314);
+            this.pbox_manage_catalog.Name = "pbox_manage_catalog";
+            this.pbox_manage_catalog.Size = new System.Drawing.Size(83, 86);
+            this.pbox_manage_catalog.TabIndex = 1;
+            this.pbox_manage_catalog.TabStop = false;
+            this.pbox_manage_catalog.Click += new System.EventHandler(this.pboxm1_Click);
             // 
             // label6
             // 
@@ -279,15 +268,15 @@
             this.label8.TabIndex = 2;
             this.label8.Text = "Register \r\nNew Member";
             // 
-            // label9
+            // label5
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(147, 220);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(239, 15);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "Loan & Return Book, Register New Member";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(145, 200);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(282, 20);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "Manage Loaning and Returning Books";
             // 
             // FormMainMenu
             // 
@@ -295,16 +284,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(874, 463);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pbox_loan);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pbox_manage);
             this.Controls.Add(this.lblc2);
-            this.Controls.Add(this.pboxm1);
+            this.Controls.Add(this.pbox_manage_catalog);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.pbox_member);
@@ -314,7 +302,7 @@
             this.Name = "FormMainMenu";
             this.Text = "FormMainMenu";
             ((System.ComponentModel.ISupportInitialize)(this.pbox_catalog)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxm1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox_manage_catalog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbox_member)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -330,8 +318,7 @@
         private System.Windows.Forms.PictureBox pbox_catalog;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label pbox_manage;
-        private System.Windows.Forms.PictureBox pboxm1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pbox_manage_catalog;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pbox_member;
         private System.Windows.Forms.Label label7;
@@ -347,6 +334,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label5;
     }
 }
