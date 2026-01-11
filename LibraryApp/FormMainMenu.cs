@@ -48,5 +48,32 @@ namespace LibraryApp
         {
             FormNetwork.loadMember();
         }
+
+        private void pbox_user_Click(object sender, EventArgs e)
+        {
+            FormNetwork.loadUser();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            FormNetwork.loadLogin();
+        }
+
+        private void FormMainMenu_Load(object sender, EventArgs e)
+        {
+            string myRole = FormNetwork.checkRole();
+            if (myRole == "M")
+            {
+                pnl_catalog.Visible = false;
+                pnl_user.Visible = false;
+                pnl_lease.Visible = false;
+            }
+            else
+            {
+                pnl_catalog.Visible = true;
+                pnl_user.Visible = true;
+                pnl_lease.Visible = true;
+            }
+        }
     }
 }

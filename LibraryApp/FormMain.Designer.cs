@@ -33,7 +33,7 @@
             // 
             // pnl_main
             // 
-            this.pnl_main.Location = new System.Drawing.Point(0, 60);
+            this.pnl_main.Location = new System.Drawing.Point(0, 0);
             this.pnl_main.Name = "pnl_main";
             this.pnl_main.Size = new System.Drawing.Size(874, 463);
             this.pnl_main.TabIndex = 0;
@@ -43,11 +43,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(874, 523);
+            this.ClientSize = new System.Drawing.Size(874, 463);
             this.Controls.Add(this.pnl_main);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormMain";
-            this.Text = "Form1";
+            this.Text = "Library App";
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.ResumeLayout(false);
 

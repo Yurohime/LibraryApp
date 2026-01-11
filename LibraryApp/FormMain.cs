@@ -1,10 +1,12 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,21 +15,53 @@ namespace LibraryApp
     public partial class FormMain : Form
     {
         UserComponent userComponent = new UserComponent();
+        Thread thread;
+        SQLComponent sqlcomp = new SQLComponent();
+
+        string sqlquary;
+        string sqlconnection;
+        string userid;
+
+        MySqlConnection connection;
+        MySqlCommand command;
+        MySqlDataAdapter adapter;
+        MySqlDataReader reader;
+
+        string myRole = "";
+        DataTable sqldata = new DataTable();
+
         public FormMain()
         {
             InitializeComponent();
-            userComponent.Userid = "";
-            userComponent.Username = "";
+        }
 
+        private void checkRoleFromSQL()
+        {
+            sqldata = new DataTable();
+            sqlquary = $"select * from users where userid = '{userComponent.Userid}';";
+            connection = new MySqlConnection(sqlconnection);
+            command = new MySqlCommand(sqlquary, connection);
+            adapter = new MySqlDataAdapter(command);
+            adapter.Fill(sqldata);
+            myRole = sqldata.Rows[0][4].ToString();
+        }
+
+        public string checkRole()
+        {
+            return myRole;
         }
 
         private void FormMain_Load(object sender, EventArgs e)
         {
             loadLogin();
+            this.sqlconnection = sqlcomp.connectToSQL();
         }
 
         public void loadLogin()
         {
+            userComponent.Userid = "";
+            userComponent.Username = "";
+
             FormLogin form = new FormLogin();
             form.Dock = DockStyle.Top;
             form.FormBorderStyle = FormBorderStyle.None;
@@ -41,6 +75,7 @@ namespace LibraryApp
 
         public void loadMainMenu()
         {
+            checkRoleFromSQL();
             FormMainMenu form = new FormMainMenu();
             form.Dock = DockStyle.Top;
             form.FormBorderStyle = FormBorderStyle.None;
@@ -91,9 +126,9 @@ namespace LibraryApp
             form.Show();
         }
 
-        public void loadManage()
+        public void loadUser()
         {
-            FormMainMenu form = new FormMainMenu();
+            FormManageUser form = new FormManageUser();
             form.Dock = DockStyle.Top;
             form.FormBorderStyle = FormBorderStyle.None;
             form.TopLevel = false;

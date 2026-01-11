@@ -28,34 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgv_book_list = new System.Windows.Forms.DataGridView();
+            this.dgv_user = new System.Windows.Forms.DataGridView();
             this.btn_back = new System.Windows.Forms.Button();
             this.lblc1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.tbox_name = new System.Windows.Forms.TextBox();
+            this.tbox_search = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbox_title = new System.Windows.Forms.TextBox();
+            this.tbox_name = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbox_password = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.tbox_phone = new System.Windows.Forms.TextBox();
+            this.rbtn_staff = new System.Windows.Forms.RadioButton();
+            this.rbtn_member = new System.Windows.Forms.RadioButton();
+            this.btn_add = new System.Windows.Forms.Button();
+            this.btn_edit = new System.Windows.Forms.Button();
+            this.btn_remove = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_book_list)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_user)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgv_book_list
+            // dgv_user
             // 
-            this.dgv_book_list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_book_list.Location = new System.Drawing.Point(24, 106);
-            this.dgv_book_list.Name = "dgv_book_list";
-            this.dgv_book_list.RowTemplate.Height = 21;
-            this.dgv_book_list.Size = new System.Drawing.Size(397, 345);
-            this.dgv_book_list.TabIndex = 35;
+            this.dgv_user.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_user.Location = new System.Drawing.Point(24, 106);
+            this.dgv_user.Name = "dgv_user";
+            this.dgv_user.RowTemplate.Height = 21;
+            this.dgv_user.Size = new System.Drawing.Size(397, 336);
+            this.dgv_user.TabIndex = 35;
+            this.dgv_user.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_user_CellMouseClick);
             // 
             // btn_back
             // 
@@ -66,6 +67,7 @@
             this.btn_back.TabIndex = 36;
             this.btn_back.Text = "Return";
             this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // lblc1
             // 
@@ -87,13 +89,14 @@
             this.label2.TabIndex = 39;
             this.label2.Text = "Search Member";
             // 
-            // tbox_name
+            // tbox_search
             // 
-            this.tbox_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbox_name.Location = new System.Drawing.Point(24, 74);
-            this.tbox_name.Name = "tbox_name";
-            this.tbox_name.Size = new System.Drawing.Size(228, 26);
-            this.tbox_name.TabIndex = 38;
+            this.tbox_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbox_search.Location = new System.Drawing.Point(24, 74);
+            this.tbox_search.Name = "tbox_search";
+            this.tbox_search.Size = new System.Drawing.Size(228, 26);
+            this.tbox_search.TabIndex = 38;
+            this.tbox_search.TextChanged += new System.EventHandler(this.tbox_search_TextChanged);
             // 
             // label1
             // 
@@ -105,13 +108,13 @@
             this.label1.TabIndex = 41;
             this.label1.Text = "Username";
             // 
-            // tbox_title
+            // tbox_name
             // 
-            this.tbox_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbox_title.Location = new System.Drawing.Point(453, 122);
-            this.tbox_title.Name = "tbox_title";
-            this.tbox_title.Size = new System.Drawing.Size(347, 26);
-            this.tbox_title.TabIndex = 40;
+            this.tbox_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbox_name.Location = new System.Drawing.Point(453, 122);
+            this.tbox_name.Name = "tbox_name";
+            this.tbox_name.Size = new System.Drawing.Size(347, 26);
+            this.tbox_name.TabIndex = 40;
             // 
             // label3
             // 
@@ -123,13 +126,13 @@
             this.label3.TabIndex = 43;
             this.label3.Text = "Password";
             // 
-            // textBox1
+            // tbox_password
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(453, 187);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(347, 26);
-            this.textBox1.TabIndex = 42;
+            this.tbox_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbox_password.Location = new System.Drawing.Point(453, 187);
+            this.tbox_password.Name = "tbox_password";
+            this.tbox_password.Size = new System.Drawing.Size(347, 26);
+            this.tbox_password.TabIndex = 42;
             // 
             // label4
             // 
@@ -141,67 +144,70 @@
             this.label4.TabIndex = 45;
             this.label4.Text = "Phone";
             // 
-            // textBox2
+            // tbox_phone
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(453, 251);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(347, 26);
-            this.textBox2.TabIndex = 44;
+            this.tbox_phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbox_phone.Location = new System.Drawing.Point(453, 251);
+            this.tbox_phone.Name = "tbox_phone";
+            this.tbox_phone.Size = new System.Drawing.Size(347, 26);
+            this.tbox_phone.TabIndex = 44;
             // 
-            // radioButton1
+            // rbtn_staff
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(453, 303);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(62, 24);
-            this.radioButton1.TabIndex = 48;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Staff";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbtn_staff.AutoSize = true;
+            this.rbtn_staff.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtn_staff.Location = new System.Drawing.Point(453, 302);
+            this.rbtn_staff.Name = "rbtn_staff";
+            this.rbtn_staff.Size = new System.Drawing.Size(62, 24);
+            this.rbtn_staff.TabIndex = 48;
+            this.rbtn_staff.TabStop = true;
+            this.rbtn_staff.Text = "Staff";
+            this.rbtn_staff.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbtn_member
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(453, 333);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(85, 24);
-            this.radioButton2.TabIndex = 49;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Member";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbtn_member.AutoSize = true;
+            this.rbtn_member.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtn_member.Location = new System.Drawing.Point(453, 332);
+            this.rbtn_member.Name = "rbtn_member";
+            this.rbtn_member.Size = new System.Drawing.Size(85, 24);
+            this.rbtn_member.TabIndex = 49;
+            this.rbtn_member.TabStop = true;
+            this.rbtn_member.Text = "Member";
+            this.rbtn_member.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_add
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(453, 392);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 27);
-            this.button1.TabIndex = 50;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.Location = new System.Drawing.Point(453, 382);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(75, 27);
+            this.btn_add.TabIndex = 50;
+            this.btn_add.Text = "Add";
+            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // button2
+            // btn_edit
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(534, 392);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 27);
-            this.button2.TabIndex = 51;
-            this.button2.Text = "Edit";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_edit.Location = new System.Drawing.Point(534, 382);
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Size = new System.Drawing.Size(75, 27);
+            this.btn_edit.TabIndex = 51;
+            this.btn_edit.Text = "Edit";
+            this.btn_edit.UseVisualStyleBackColor = true;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
-            // button3
+            // btn_remove
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(453, 425);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 27);
-            this.button3.TabIndex = 52;
-            this.button3.Text = "Remove";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_remove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_remove.Location = new System.Drawing.Point(453, 415);
+            this.btn_remove.Name = "btn_remove";
+            this.btn_remove.Size = new System.Drawing.Size(94, 27);
+            this.btn_remove.TabIndex = 52;
+            this.btn_remove.Text = "Remove";
+            this.btn_remove.UseVisualStyleBackColor = true;
+            this.btn_remove.Click += new System.EventHandler(this.btn_remove_Click);
             // 
             // button4
             // 
@@ -212,6 +218,7 @@
             this.button4.TabIndex = 53;
             this.button4.Text = "Clear";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // FormManageUser
             // 
@@ -219,26 +226,27 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(874, 463);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.btn_remove);
+            this.Controls.Add(this.btn_edit);
+            this.Controls.Add(this.btn_add);
+            this.Controls.Add(this.rbtn_member);
+            this.Controls.Add(this.rbtn_staff);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbox_phone);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbox_password);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbox_title);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.tbox_name);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.tbox_search);
             this.Controls.Add(this.lblc1);
             this.Controls.Add(this.btn_back);
-            this.Controls.Add(this.dgv_book_list);
+            this.Controls.Add(this.dgv_user);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormManageUser";
             this.Text = "FormManageUser";
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_book_list)).EndInit();
+            this.Load += new System.EventHandler(this.FormManageUser_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_user)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,22 +254,22 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgv_book_list;
+        private System.Windows.Forms.DataGridView dgv_user;
         private System.Windows.Forms.Button btn_back;
         private System.Windows.Forms.Label lblc1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tbox_name;
+        private System.Windows.Forms.TextBox tbox_search;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbox_title;
+        private System.Windows.Forms.TextBox tbox_name;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbox_password;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox tbox_phone;
+        private System.Windows.Forms.RadioButton rbtn_staff;
+        private System.Windows.Forms.RadioButton rbtn_member;
+        private System.Windows.Forms.Button btn_add;
+        private System.Windows.Forms.Button btn_edit;
+        private System.Windows.Forms.Button btn_remove;
         private System.Windows.Forms.Button button4;
     }
 }
