@@ -207,5 +207,10 @@ namespace LibraryApp
             bookName = tbox_title.Text;
             refreshData();
         }
+
+        private void btn_clear_all_Click(object sender, EventArgs e)
+        {
+            FormNetwork.loadMember();
+        }
     }
 }

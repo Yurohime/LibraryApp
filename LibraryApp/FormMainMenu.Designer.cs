@@ -79,9 +79,11 @@
             // pbox_catalog
             // 
             this.pbox_catalog.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbox_catalog.Image = global::LibraryApp.Properties.Resources.img_catalog;
             this.pbox_catalog.Location = new System.Drawing.Point(3, 3);
             this.pbox_catalog.Name = "pbox_catalog";
             this.pbox_catalog.Size = new System.Drawing.Size(83, 86);
+            this.pbox_catalog.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbox_catalog.TabIndex = 1;
             this.pbox_catalog.TabStop = false;
             this.pbox_catalog.Click += new System.EventHandler(this.pbox_catalog_Click);
@@ -111,9 +113,11 @@
             // pbox_manage_catalog
             // 
             this.pbox_manage_catalog.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbox_manage_catalog.Image = global::LibraryApp.Properties.Resources.img_inventory;
             this.pbox_manage_catalog.Location = new System.Drawing.Point(3, 3);
             this.pbox_manage_catalog.Name = "pbox_manage_catalog";
             this.pbox_manage_catalog.Size = new System.Drawing.Size(83, 86);
+            this.pbox_manage_catalog.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbox_manage_catalog.TabIndex = 1;
             this.pbox_manage_catalog.TabStop = false;
             this.pbox_manage_catalog.Click += new System.EventHandler(this.pboxm1_Click);
@@ -131,9 +135,11 @@
             // pbox_member
             // 
             this.pbox_member.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbox_member.Image = global::LibraryApp.Properties.Resources.img_user;
             this.pbox_member.Location = new System.Drawing.Point(3, 3);
             this.pbox_member.Name = "pbox_member";
             this.pbox_member.Size = new System.Drawing.Size(83, 86);
+            this.pbox_member.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbox_member.TabIndex = 1;
             this.pbox_member.TabStop = false;
             this.pbox_member.Click += new System.EventHandler(this.pbox_member_Click);
@@ -161,9 +167,11 @@
             // pbox_user
             // 
             this.pbox_user.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbox_user.Image = global::LibraryApp.Properties.Resources.img_loan;
             this.pbox_user.Location = new System.Drawing.Point(3, 3);
             this.pbox_user.Name = "pbox_user";
             this.pbox_user.Size = new System.Drawing.Size(83, 86);
+            this.pbox_user.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbox_user.TabIndex = 1;
             this.pbox_user.TabStop = false;
             this.pbox_user.Click += new System.EventHandler(this.pbox_user_Click);
@@ -171,7 +179,7 @@
             // btnLogout
             // 
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(730, 393);
+            this.btnLogout.Location = new System.Drawing.Point(749, 374);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(102, 37);
             this.btnLogout.TabIndex = 6;

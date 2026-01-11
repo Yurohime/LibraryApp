@@ -36,19 +36,14 @@
             this.tbox_author = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tbox_year = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbox_unknown = new System.Windows.Forms.CheckBox();
             this.cbox_borrow = new System.Windows.Forms.CheckBox();
             this.cbox_avail = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_return = new System.Windows.Forms.Button();
+            this.btn_clear_all = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_mainview)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,7 +71,7 @@
             this.tbox_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbox_name.Location = new System.Drawing.Point(525, 93);
             this.tbox_name.Name = "tbox_name";
-            this.tbox_name.Size = new System.Drawing.Size(263, 26);
+            this.tbox_name.Size = new System.Drawing.Size(337, 26);
             this.tbox_name.TabIndex = 3;
             this.tbox_name.TextChanged += new System.EventHandler(this.tbox_name_TextChanged);
             // 
@@ -105,7 +100,7 @@
             this.tbox_author.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbox_author.Location = new System.Drawing.Point(526, 165);
             this.tbox_author.Name = "tbox_author";
-            this.tbox_author.Size = new System.Drawing.Size(263, 26);
+            this.tbox_author.Size = new System.Drawing.Size(336, 26);
             this.tbox_author.TabIndex = 5;
             this.tbox_author.TextChanged += new System.EventHandler(this.tbox_author_TextChanged);
             // 
@@ -124,34 +119,10 @@
             this.tbox_year.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbox_year.Location = new System.Drawing.Point(526, 237);
             this.tbox_year.Name = "tbox_year";
-            this.tbox_year.Size = new System.Drawing.Size(263, 26);
+            this.tbox_year.Size = new System.Drawing.Size(336, 26);
             this.tbox_year.TabIndex = 7;
             this.tbox_year.TextChanged += new System.EventHandler(this.tbox_year_TextChanged);
             this.tbox_year.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbox_year_KeyPress);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(794, 93);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(26, 26);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(795, 165);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(26, 26);
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(795, 237);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(26, 26);
-            this.pictureBox3.TabIndex = 13;
-            this.pictureBox3.TabStop = false;
             // 
             // panel1
             // 
@@ -223,17 +194,26 @@
             this.btn_return.UseVisualStyleBackColor = true;
             this.btn_return.Click += new System.EventHandler(this.btn_return_Click);
             // 
+            // btn_clear_all
+            // 
+            this.btn_clear_all.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clear_all.Location = new System.Drawing.Point(749, 406);
+            this.btn_clear_all.Name = "btn_clear_all";
+            this.btn_clear_all.Size = new System.Drawing.Size(113, 28);
+            this.btn_clear_all.TabIndex = 55;
+            this.btn_clear_all.Text = "Clear";
+            this.btn_clear_all.UseVisualStyleBackColor = true;
+            this.btn_clear_all.Click += new System.EventHandler(this.btn_clear_all_Click);
+            // 
             // FormCatalog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(874, 463);
+            this.Controls.Add(this.btn_clear_all);
             this.Controls.Add(this.btn_return);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbox_year);
             this.Controls.Add(this.label1);
@@ -247,9 +227,6 @@
             this.Text = "FormCatalog";
             this.Load += new System.EventHandler(this.FormCatalog_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_mainview)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -267,14 +244,12 @@
         private System.Windows.Forms.TextBox tbox_author;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbox_year;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.CheckBox cbox_unknown;
         private System.Windows.Forms.CheckBox cbox_borrow;
         private System.Windows.Forms.CheckBox cbox_avail;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_return;
+        private System.Windows.Forms.Button btn_clear_all;
     }
 }
