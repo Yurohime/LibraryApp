@@ -140,6 +140,9 @@ XAMPP
 
 ## ---- Database Schema ----
 
+### ERD DIAGRAM
+![ERD DIAGRAM](Github/Asset/LibraryAppERD.png)
+
 ### Tables
 
 **Users**
