@@ -10,19 +10,19 @@ Author : Alberto Halim Limantoro
 ## ---- Screenshots ----
 
 ### Main Menu
-![Main Menu](Github/Assets/MainMenu.png)
+![Main Menu](Github/Asset/MainMenu.png)
 
 ### Catalog Viewer
-![Catalog Viewer](Github/Assets/Catalog.png)
+![Catalog Viewer](Github/Asset/Catalog.png)
 
 ### Manage Lease
-![Manage Lease](Github/Assets/Loan.png)
+![Manage Lease](Github/Asset/Loan.png)
 
 ### Manage Catalog
-![Main Menu](Github/Assets/Book.png)
+![Catalog](Github/Asset/Book.png)
 
 ### Manage User
-![Main Menu](Github/Assets/User.png)
+![User](Github/Asset/User.png)
 
 
 ## ---- Features ----
@@ -185,17 +185,20 @@ public class SQLComponent
 
 ## ---- Testing ----
 
-Total Test Cases: 16
+Total Test Cases: 8
+Total Success : 8
+Success Rate : 100%
 
 ### Test Categories
-1. Interface Testing (4 tests)
-2. Book Catalog Management (4 tests)
-3. Loan & Return Management (5 tests)
-4. User Management (4 tests)
+1. Interface Testing (1 tests)
+2. Book Catalog Management (2 tests)
+3. Loan & Return Management (3 tests)
+4. User Management (1 tests)
 5. Business Logic (1 test)
 
 ### Test Case
-see Test.docs
+See TESTING DOCUMENTATION.docx
+In Github/Asset
 
 ## ---- Requirement ----
 Visual Studio 2022
