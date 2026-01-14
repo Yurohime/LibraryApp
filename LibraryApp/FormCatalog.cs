@@ -54,6 +54,15 @@ namespace LibraryApp
             getDataFromSQL();
             checkFilter();
             dgv_mainview.DataSource = sqldata;
+            PreventSorting();
+        }
+
+        private void PreventSorting()
+        {
+            foreach (DataGridViewColumn column in dgv_mainview.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
         }
 
         private void checkFilter()
@@ -137,7 +146,7 @@ namespace LibraryApp
 
         private void cbox_avail_CheckStateChanged(object sender, EventArgs e)
         {
-
+            refreshData();
         }
 
         private void cbox_borrow_CheckedChanged(object sender, EventArgs e)

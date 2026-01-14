@@ -95,6 +95,7 @@ namespace LibraryApp
             sqlMemberData = getDataFromSQLUsingQuery($"call getMembersByUsername('{userName}');");
             dgv_member.DataSource = sqlMemberData;
             dgv_member.Columns["userid"].Visible = false;
+            PreventSorting(dgv_member);
         }
         private void loadBookData()
         {
@@ -103,6 +104,7 @@ namespace LibraryApp
                 sqlBookData = getDataFromSQLUsingQuery($"call getAvailableBooks('{bookName}');");
                 dgv_book.DataSource = sqlBookData;
                 dgv_book.Columns["bookid"].Visible = false;
+                PreventSorting(dgv_book);
             }
             dgv_book.ClearSelection();
         }
@@ -113,22 +115,31 @@ namespace LibraryApp
                 sqlHistoryData = getDataFromSQLUsingQuery($"call getUserHistory('{currentUserIDSelected}')");
                 dgv_history.DataSource = sqlHistoryData;
                 dgv_history.Columns["bookid"].Visible = false;
+                PreventSorting(dgv_history);
 
                 for (int i = 0; i < sqlHistoryData.Rows.Count; i++)
                 {
                     if (sqlHistoryData.Rows[i][1].ToString() == "Returned")
                     {
                         sqlHistoryData.Rows.RemoveAt(i);
-                        i -= 1;
+                        i = 0;
                     }
                     if (sqlHistoryData.Rows[i][1].ToString() == "Returned Late")
                     {
                         sqlHistoryData.Rows.RemoveAt(i);
-                        i -= 1;
+                        i = 0;
                     }
                 }
             }
             dgv_history.ClearSelection();
+        }
+
+        private void PreventSorting(DataGridView selectedDGV)
+        {
+            foreach (DataGridViewColumn column in selectedDGV.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
         }
 
         private DataTable getDataFromSQLUsingQuery(string query)

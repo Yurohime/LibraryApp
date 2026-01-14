@@ -293,7 +293,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="SQL\DBLibrary.sql" />
+    <Content Include="SQL\LibraryAppERD.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\img_catalog.jpg" />
   </ItemGroup>

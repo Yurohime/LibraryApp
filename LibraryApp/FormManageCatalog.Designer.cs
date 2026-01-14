@@ -47,7 +47,6 @@
             this.btn_clear = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.tbox_search = new System.Windows.Forms.TextBox();
-            this.tbn_gen = new System.Windows.Forms.Button();
             this.btn_clear_all = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_book_list)).BeginInit();
             this.SuspendLayout();
@@ -141,6 +140,7 @@
             this.tbox_year.Name = "tbox_year";
             this.tbox_year.Size = new System.Drawing.Size(78, 26);
             this.tbox_year.TabIndex = 40;
+            this.tbox_year.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbox_year_KeyPress);
             // 
             // btn_add
             // 
@@ -224,16 +224,6 @@
             this.tbox_search.TabIndex = 51;
             this.tbox_search.TextChanged += new System.EventHandler(this.tbox_search_TextChanged);
             // 
-            // tbn_gen
-            // 
-            this.tbn_gen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbn_gen.Location = new System.Drawing.Point(566, 410);
-            this.tbn_gen.Name = "tbn_gen";
-            this.tbn_gen.Size = new System.Drawing.Size(159, 28);
-            this.tbn_gen.TabIndex = 53;
-            this.tbn_gen.Text = "Generate Marker";
-            this.tbn_gen.UseVisualStyleBackColor = true;
-            // 
             // btn_clear_all
             // 
             this.btn_clear_all.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -251,7 +241,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(874, 463);
             this.Controls.Add(this.btn_clear_all);
-            this.Controls.Add(this.tbn_gen);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tbox_search);
             this.Controls.Add(this.btn_clear);
@@ -299,7 +288,6 @@
         private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbox_search;
-        private System.Windows.Forms.Button tbn_gen;
         private System.Windows.Forms.Button btn_clear_all;
     }
 }

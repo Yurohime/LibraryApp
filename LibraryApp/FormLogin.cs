@@ -47,11 +47,15 @@ namespace LibraryApp
         }
         private void getUserData()
         {
+            //MessageBox.Show("");
+            sqldata.Clear();
             sqlquary = $"select * from users;";
             connection = new MySqlConnection(sqlconnection);
             command = new MySqlCommand(sqlquary, connection);
             adapter = new MySqlDataAdapter(command);
             adapter.Fill(sqldata);
+
+            
             //Console.WriteLine(sqldata.Rows[0][0].ToString());
         }
 
@@ -59,6 +63,13 @@ namespace LibraryApp
         {
             string username = tboxUsername.Text;
             string password = tboxPassword.Text;
+            bool userNotFound = true;
+
+            if (sqldata.Rows.Count == 0)
+            {
+                MessageBox.Show("Database is not connected yet, Open Xampp");
+            }
+            //MessageBox.Show(sqldata.Rows.Count.ToString());
 
             for (int i = 0; i < sqldata.Rows.Count; i++)
             {
@@ -67,18 +78,24 @@ namespace LibraryApp
                 {
                     continue;
                 }
-
-                // if password doesnt match, break
+                else
+                {
+                    userNotFound = false;
+                }
                 if (password != sqldata.Rows[i][1].ToString())
                 {
                     MessageBox.Show("Wrong Password");
                     break;
                 }
-
                 FormNetwork.setGlobalVariable("set", "username", sqldata.Rows[i][2].ToString());
                 FormNetwork.setGlobalVariable("set", "userid", sqldata.Rows[i][0].ToString());
                 FormNetwork.loadMainMenu();
+            }
 
+            if (userNotFound)
+            {
+                MessageBox.Show("Sorry, User not Found");
+                getUserData();
             }
         }
         private void FormLogin_Load(object sender, EventArgs e)
@@ -89,6 +106,11 @@ namespace LibraryApp
         private void btnLogin_Click(object sender, EventArgs e)
         {
             loginAttempt();
+        }
+
+        private void cboxImplement()
+        {
+           // selected item selected index change
         }
     }
 }

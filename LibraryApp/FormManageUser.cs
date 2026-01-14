@@ -53,6 +53,7 @@ namespace LibraryApp
             sqlUserData = getDataFromSQLUsingQuery($"CALL getUsers('{userName}');");
             dgv_user.DataSource = sqlUserData;
             dgv_user.Columns["User ID"].Visible = false;
+            PreventSorting();
         }
 
         private DataTable getDataFromSQLUsingQuery(string query)
@@ -142,8 +143,19 @@ namespace LibraryApp
                 command = new MySqlCommand(sqlquary, connection);
                 reader = command.ExecuteReader();
                 connection.Close();
+                MessageBox.Show("Successfully Added " + tbox_name.Text);
                 refreshData();
                 clearAllInput();
+            }
+        }
+
+        
+
+        private void PreventSorting()
+        {
+            foreach (DataGridViewColumn column in dgv_user.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
         }
 
@@ -166,6 +178,7 @@ namespace LibraryApp
                 command = new MySqlCommand(sqlquary, connection);
                 reader = command.ExecuteReader();
                 connection.Close();
+                MessageBox.Show("Successfully Updated " + tbox_name.Text);
                 refreshData();
             }
             else
@@ -207,6 +220,7 @@ namespace LibraryApp
             command = new MySqlCommand(sqlquary, connection);
             reader = command.ExecuteReader();
             connection.Close();
+            MessageBox.Show("Successfully Removed " + tbox_name.Text);
             refreshData();
         }
 
