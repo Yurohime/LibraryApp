@@ -169,9 +169,40 @@ XAMPP
 
 ### Encapsulation
 
+public class SQLComponent
+{
+    public string connection = "localhost";
+    public string username = "root";
+    public string password = "";
+    public string database = "db_library";
+
+    public string connectToSQL()
+    {
+        string sqlconnection = $"server={connection};uid={username};password={password};database={database}";
+        return sqlconnection;
+    }
+}
+
 ## ---- Testing ----
 
+Total Test Cases: 16
+
+### Test Categories
+1. Interface Testing (4 tests)
+2. Book Catalog Management (4 tests)
+3. Loan & Return Management (5 tests)
+4. User Management (4 tests)
+5. Business Logic (1 test)
+
+### Test Case
+see Test.docs
+
 ## ---- Requirement ----
+Visual Studio 2022
+NuGet Package MySQL.Client
+MySQL Workbench
+MySQL Server
+XAMPP
 
 # ---- Author ----
 ### Alberto Halim Limantoro
