@@ -73,10 +73,101 @@ XAMPP
 
 ## ---- Project Structure ----
 
+📦 
+├─ .gitattributes
+├─ .gitignore
+├─ Github
+│  └─ Asset
+│     ├─ Book.jpg
+│     ├─ Book.png
+│     ├─ Catalog.jpg
+│     ├─ Catalog.png
+│     ├─ Loan.jpg
+│     ├─ Loan.png
+│     ├─ MainMenu.jpg
+│     ├─ MainMenu.png
+│     ├─ User.jpg
+│     └─ User.png
+├─ LibraryApp.sln
+├─ LibraryApp
+│  ├─ App.config
+│  ├─ FormCatalog.Designer.cs
+│  ├─ FormCatalog.cs
+│  ├─ FormCatalog.resx
+│  ├─ FormHistory.Designer.cs
+│  ├─ FormHistory.cs
+│  ├─ FormHistory.resx
+│  ├─ FormLogin.Designer.cs
+│  ├─ FormLogin.cs
+│  ├─ FormLogin.resx
+│  ├─ FormMain.Designer.cs
+│  ├─ FormMain.cs
+│  ├─ FormMain.resx
+│  ├─ FormMainMenu.Designer.cs
+│  ├─ FormMainMenu.cs
+│  ├─ FormMainMenu.resx
+│  ├─ FormManageCatalog.Designer.cs
+│  ├─ FormManageCatalog.cs
+│  ├─ FormManageCatalog.resx
+│  ├─ FormManageLoan.Designer.cs
+│  ├─ FormManageLoan.cs
+│  ├─ FormManageLoan.resx
+│  ├─ FormManageUser.Designer.cs
+│  ├─ FormManageUser.cs
+│  ├─ FormManageUser.resx
+│  ├─ Global Variable
+│  │  ├─ ClassSQLComponent.cs
+│  │  └─ UserComponent.cs
+│  ├─ LibraryApp.csproj
+│  ├─ Program.cs
+│  ├─ Properties
+│  │  ├─ AssemblyInfo.cs
+│  │  ├─ Resources.Designer.cs
+│  │  ├─ Resources.resx
+│  │  ├─ Settings.Designer.cs
+│  │  └─ Settings.settings
+│  ├─ Resources
+│  │  ├─ img_catalog.jpg
+│  │  ├─ img_inventory.jpg
+│  │  ├─ img_loan.jpg
+│  │  └─ img_user.jpg
+│  ├─ SQL
+│  │  ├─ DBLibrary.sql
+│  │  └─ LibraryAppERD.png
+│  └─ packages.config
+└─ README.md
+
 
 ## ---- Database Schema ----
 
+### Tables
+
+**Users**
+> userid (UUID) [PK]
+> userpassword (VARCHAR)
+> username (VARCHAR)
+> userphone (VARCHAR)
+> userrole (VARCHAR)
+> status_del (BOOL) default false
+
+**Books**
+> bookid (UUID) [PK]
+> bookmarker (VARCHAR)
+> booktitle (VARCHAR)
+> bookauthor (VARCHAR)
+> bookyear (INT)
+> bookcondition (VARCHAR) default 'G'
+
+**LoanDetail**
+> bookid (UUID) [FK]
+> userid (UUID) [FK]
+> dateborrow (DATE)
+> datereturn (DATE)
+
+
 ## ---- OOP Implementation ----
+
+### Encapsulation
 
 ## ---- Testing ----
 
