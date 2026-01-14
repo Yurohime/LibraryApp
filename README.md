@@ -27,11 +27,52 @@ Author : Alberto Halim Limantoro
 
 ## ---- Features ----
 
+### Staff
+> Track book loans
+> Return and loan books through the sistem
+> Manage members and staff
+> Manage book inventory
+
+### Member
+> View catalog
+> See available books
+> Filter via title, author, or year
+
+### System
+- Member/Staff login feature
+- Fast and Responsive design
+- Real-time updates
+- SQL Database intergration (set to localhost currently)
+
 ## ---- Tech Stack ----
+
+### IDE
+Microsoft Visual Studio 2022
+.NET Framework 4.8
+
+### Frontend
+Windows Forms (WinForms)
+
+### Backend
+MySQL Server
+MySQL Workbench
+XAMPP
 
 ## ---- Quick Start ----
 
+### Prerequisites
+> using a Window Machine (Emulator works)
+> Visual Studio 2022/2026
+
+### Installation
+> Download the files from here
+> Run/Build on your visual studio
+
+### Installation
+> Nuget Package MySQL.Client
+
 ## ---- Project Structure ----
+
 
 ## ---- Database Schema ----
 
